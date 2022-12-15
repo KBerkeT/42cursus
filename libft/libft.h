@@ -6,7 +6,7 @@
 /*   By: kturken <kturken@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 10:44:14 by kturken           #+#    #+#             */
-/*   Updated: 2022/12/14 12:35:06 by kturken          ###   ########.fr       */
+/*   Updated: 2022/12/15 15:59:10 by kturken          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,13 @@
 
 #include <unistd.h>
 #include <stdlib.h>
+
+typedef struct      s_list
+{
+    void            *content;
+    struct s_list   *next;
+}                   t_list;
+
 
 void	ft_bzero(void *s, size_t n);
 void    *ft_memchr(const void *s, int c, size_t n);
