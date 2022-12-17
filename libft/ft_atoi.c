@@ -9,9 +9,10 @@
 /*   Updated: 2022/12/11 17:35:58 by kturken          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
-int ft_atoi(const char *str)
+int     ft_atoi (const char *str)
 {
     int i;
     int sign;
@@ -24,7 +25,7 @@ int ft_atoi(const char *str)
             str[i] == '\n' || str[i] == '\r' || str[i] == '\v')
             i++;
     if (str[i] == '-')
-        sign = -1;
+    sign = -1;
     i++;
     while (str)
     {
