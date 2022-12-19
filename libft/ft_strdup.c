@@ -6,17 +6,17 @@
 /*   By: kturken <kturken@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 14:02:54 by kturken           #+#    #+#             */
-/*   Updated: 2022/12/12 14:17:13 by kturken          ###   ########.fr       */
+/*   Updated: 2022/12/19 13:35:47 by kturken          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char    *ft_strdup(const char *s1)
+char	*ft_strdup(const char *s1)
 {
-    char    *str;
+	char	*str;
 
-    str = (char *) malloc(ft_strlen(s1) + 1);
-    str = (char *) s1;
-    return (str);
+	str = (char *) malloc(ft_strlen(s1) + 1);
+	str = (char *) s1;
+	return (str);
 }

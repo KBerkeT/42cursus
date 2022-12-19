@@ -12,45 +12,45 @@
 
 #include "libft.h"
 
-int ft_ndigit(int  n)
+int	ft_ndigit(int n)
 {
-    int i;
+	int	i;
 
-    i = 1;
-    if (n < 0)
-    {
-        n *= -1;
-        i++;
-    }
-    while (n > 9)
-    {
-        n /= 10;
-        i++;
-    }
-    return (i);
+	i = 1;
+	if (n < 0)
+	{
+		n *= -1;
+		i++;
+	}
+	while (n > 9)
+	{
+		n /= 10;
+		i++;
+	}
+	return (i);
 }
 
-char    *ft_itoa(int n)
+char	*ft_itoa(int n)
 {
-    char    *str;
-    int len;
-    int sign;
+	char	*str;
+	int		len;
+	int		sign;
 
-    sign = 0;
-    len = ft_ndigit(n);
-    str = (char *) malloc(len + 1);
-    if (n < 0)
-    {
-        n *= -1;
-        str[sign++] = '-';
-    }
-    str[len] = 0;
-    if (n == 0)
-        str[sign] = '0';
-    while (n != 0)
-    {
-        str[--len] = (n % 10) + 48;
-        n /= 10;
-    }
-    return (str); 
+	sign = 0;
+	len = ft_ndigit(n);
+	str = (char *) malloc(len + 1);
+	if (n < 0)
+	{
+		n *= -1;
+	str[sign++] = '-';
+	}
+	str[len] = 0;
+	if (n == 0)
+		str[sign] = '0';
+	while (n != 0)
+	{
+		str[--len] = (n % 10) + 48;
+		n /= 10;
+	}
+	return (str);
 }

@@ -6,7 +6,7 @@
 /*   By: kturken <kturken@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/07 15:23:42 by kturken           #+#    #+#             */
-/*   Updated: 2022/12/13 14:31:34 by kturken          ###   ########.fr       */
+/*   Updated: 2022/12/19 13:55:38 by kturken          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	size_t	i;
-	
+
 	i = 0;
 	if (!dst && !src)
 		return (NULL);

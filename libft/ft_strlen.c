@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kturken <kturken@student.42kocaeli.co      +#+  +:+       +#+        */
+/*   By: kturken <kturken@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/07 14:20:31 by kturken           #+#    #+#             */
-/*   Updated: 2022/12/07 14:38:22 by kturken          ###   ########.fr       */
+/*   Updated: 2022/12/19 13:39:35 by kturken          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 size_t	ft_strlen(const char *s)

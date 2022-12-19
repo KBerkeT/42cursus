@@ -6,7 +6,7 @@
 #    By: kturken <kturken@student.42kocaeli.com.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/17 17:18:21 by kturken           #+#    #+#              #
-#    Updated: 2022/12/17 17:18:21 by kturken          ###   ########.fr        #
+#    Updated: 2022/12/19 14:47:14 by kturken          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -70,10 +70,11 @@ LIB = libft.h
 
 all: $(NAME)
 
+.c.o:
+	$(CC) $(CCFLAGS)
+
 $(NAME):
-	$(CC) $(CCFLAGS) $(LIB) $(SRCS) $(SRCS_BONUS)
-	ar rc $(NAME) $(OBJS) $(OBJS_BONUS)
-	ranlib $(NAME)
+	ar -rcs $(NAME) $(OBJS)
 
 clean:
 	rm -rf $(OBJS) $(OBJS_BONUS)
@@ -82,3 +83,11 @@ fclean:
 	rm -rf $(NAME)
 
 re: fclean all
+
+bonus: $(OBJS_BONUS) $(OBJS)
+	ar -rcs $(OBJS_BONUS)
+
+norm:
+	norminette *.[ch]
+
+.PHONY: clean fclean all re bonus norm

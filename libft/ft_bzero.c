@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kturken <kturken@student.42kocaeli.co      +#+  +:+       +#+        */
+/*   By: kturken <kturken@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/07 15:04:16 by kturken           #+#    #+#             */
-/*   Updated: 2022/12/07 15:22:28 by kturken          ###   ########.fr       */
+/*   Updated: 2022/12/19 13:08:48 by kturken          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 void	ft_bzero(void *s, size_t n)

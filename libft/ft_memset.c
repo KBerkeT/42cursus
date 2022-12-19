@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kturken <kturken@student.42kocaeli.co      +#+  +:+       +#+        */
+/*   By: kturken <kturken@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/07 14:39:02 by kturken           #+#    #+#             */
-/*   Updated: 2022/12/07 15:03:37 by kturken          ###   ########.fr       */
+/*   Updated: 2022/12/19 14:55:20 by kturken          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include <stdio.h>
 
 void	*ft_memset(void *b, int c, size_t len)
@@ -24,11 +25,4 @@ void	*ft_memset(void *b, int c, size_t len)
 		i++;
 	}
 	return (b);
-}
-
-int main()
-{
-	char cdizi[] = "Bilgisayar";
-	ft_memset(cdizi, 'x', 3);
-	printf("%s", cdizi);
 }
