@@ -6,7 +6,7 @@
 /*   By: kturken <kturken@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 15:26:40 by kturken           #+#    #+#             */
-/*   Updated: 2022/12/19 13:38:40 by kturken          ###   ########.fr       */
+/*   Updated: 2022/12/19 15:23:13 by kturken          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	int		i;
-	int		j;
-	size_t	s1_len;
-	size_t	s2_len;
-	char	*str;
+	size_t		i;
+	size_t		j;
+	size_t		s1_len;
+	size_t		s2_len;
+	char		*str;
 
-	s1_len = strlen ((char *)s1);
-	s2_len = strlen ((char *)s2);
+	s1_len = ft_strlen ((char *)s1);
+	s2_len = ft_strlen ((char *)s2);
 	str = (char *) malloc(s1_len + s2_len + 1);
 	if (str == NULL)
 		return (0);
