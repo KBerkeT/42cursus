@@ -39,12 +39,17 @@ char	*ft_itoa(int n)
 	sign = 0;
 	len = ft_ndigit(n);
 	str = (char *) malloc(len + 1);
+    str[len] = 0;
 	if (n < 0)
 	{
+        if (n == -2147483648)
+        {
+            str[(len--) - 1] = '8';
+            n /= 10;
+        }
 		n *= -1;
-	str[sign++] = '-';
+	    str[sign++] = '-';
 	}
-	str[len] = 0;
 	if (n == 0)
 		str[sign] = '0';
 	while (n != 0)

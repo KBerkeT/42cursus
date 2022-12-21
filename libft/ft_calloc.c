@@ -14,14 +14,16 @@
 
 void	*ft_calloc(size_t count, size_t size)
 {
-	char	*ptr;
+	void	*ptr;
 	size_t	i;
 
 	i = 0;
-	ptr = malloc (count * size);
+	ptr = (void *) malloc (count * size);
+    if (!ptr)
+        return(0);
 	while (i < count * size)
 	{
-		ptr[i] = 0;
+		((char *)ptr)[i] = 0;
 		i++;
 	}
 	return ((void *)ptr);
