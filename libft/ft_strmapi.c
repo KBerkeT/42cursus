@@ -6,7 +6,7 @@
 /*   By: kturken <kturken@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/15 13:27:17 by kturken           #+#    #+#             */
-/*   Updated: 2022/12/19 15:27:36 by kturken          ###   ########.fr       */
+/*   Updated: 2022/12/22 16:42:18 by kturken          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	if (!str)
 		return (0);
 	i = 0;
-	while (s)
+	while (s[i])
 	{
 		str[i] = f(i, s[i]);
 		i++;

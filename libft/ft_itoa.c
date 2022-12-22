@@ -19,6 +19,11 @@ int	ft_ndigit(int n)
 	i = 1;
 	if (n < 0)
 	{
+		if (n == -2147483648)
+		{
+			n /= 10;
+			i++;
+		}
 		n *= -1;
 		i++;
 	}
@@ -39,16 +44,16 @@ char	*ft_itoa(int n)
 	sign = 0;
 	len = ft_ndigit(n);
 	str = (char *) malloc(len + 1);
-    str[len] = 0;
+	str[len] = 0;
 	if (n < 0)
 	{
-        if (n == -2147483648)
-        {
-            str[(len--) - 1] = '8';
-            n /= 10;
-        }
+		if (n == -2147483648)
+		{
+			str[(len--) - 1] = '8';
+			n /= 10;
+		}
 		n *= -1;
-	    str[sign++] = '-';
+		str[sign++] = '-';
 	}
 	if (n == 0)
 		str[sign] = '0';

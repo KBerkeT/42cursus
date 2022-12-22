@@ -6,7 +6,7 @@
 /*   By: kturken <kturken@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/16 19:06:40 by kturken           #+#    #+#             */
-/*   Updated: 2022/12/19 17:14:36 by kturken          ###   ########.fr       */
+/*   Updated: 2022/12/22 17:00:23 by kturken          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 
 	while (*lst)
 	{
-		tmp = *lst;
-		del((*lst) -> content);
+		tmp = (*lst)-> next;
+		del((*lst)-> content);
 		free(*lst);
 		*lst = tmp;
 	}

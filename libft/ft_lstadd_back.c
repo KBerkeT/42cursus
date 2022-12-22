@@ -6,7 +6,7 @@
 /*   By: kturken <kturken@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/16 18:39:51 by kturken           #+#    #+#             */
-/*   Updated: 2022/12/19 13:15:56 by kturken          ###   ########.fr       */
+/*   Updated: 2022/12/22 12:24:10 by kturken          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,11 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*last;
 
-    if (!(*lst))
-    {
-        *lst = new;
-        return ;
-    }
+	if (!(*lst))
+	{
+		*lst = new;
+		return ;
+	}
 	last = ft_lstlast(*lst);
 	last -> next = new;
 	new -> next = NULL;

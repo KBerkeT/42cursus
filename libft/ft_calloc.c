@@ -6,7 +6,7 @@
 /*   By: kturken <kturken@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 13:08:34 by kturken           #+#    #+#             */
-/*   Updated: 2022/12/19 13:04:06 by kturken          ###   ########.fr       */
+/*   Updated: 2022/12/22 15:45:10 by kturken          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,13 @@ void	*ft_calloc(size_t count, size_t size)
 	size_t	i;
 
 	i = 0;
-	ptr = (void *) malloc (count * size);
-    if (!ptr)
-        return(0);
+	ptr = (void *) malloc(count * size);
+	if (!ptr)
+		return (0);
 	while (i < count * size)
 	{
 		((char *)ptr)[i] = 0;
 		i++;
 	}
-	return ((void *)ptr);
+	return (ptr);
 }
