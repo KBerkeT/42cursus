@@ -25,13 +25,14 @@ char	*ft_strtrim(char const *s1, char const *set)
 		return (0);
 	while (ft_strchr(set, s1[fidx]) && s1)
 		fidx++;
-	while (ft_strchr(set, s1[lidx - 1]) && lidx)
+	while (ft_strchr(set, s1[lidx - 1]) && lidx > fidx)
 		lidx--;
 	str = (char *) malloc(lidx - fidx + 1);
 	if (!str)
 		return (0);
 	i = 0;
 	while (fidx < lidx)
-		str[i] = s1[fidx++];
+		str[i++] = s1[fidx++];
+    str[i] = 0;
 	return (str);
 }
