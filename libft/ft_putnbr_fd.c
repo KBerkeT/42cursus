@@ -6,7 +6,7 @@
 /*   By: kturken <kturken@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/15 15:13:09 by kturken           #+#    #+#             */
-/*   Updated: 2022/12/19 13:29:42 by kturken          ###   ########.fr       */
+/*   Updated: 2022/12/26 12:44:56 by kturken          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,4 +18,5 @@ void	ft_putnbr_fd(int n, int fd)
 
 	str = ft_itoa(n);
 	ft_putstr_fd(str, fd);
+	free(str);
 }

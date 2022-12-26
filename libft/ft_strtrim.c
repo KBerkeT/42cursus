@@ -6,7 +6,7 @@
 /*   By: kturken <kturken@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 16:04:13 by kturken           #+#    #+#             */
-/*   Updated: 2022/12/22 16:50:52 by kturken          ###   ########.fr       */
+/*   Updated: 2022/12/26 12:42:23 by kturken          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	lidx = ft_strlen(s1);
 	if (!s1 || !set)
 		return (0);
-	while (ft_strchr(set, s1[fidx]) && s1)
+	while (ft_strchr(set, s1[fidx]) && s1[fidx])
 		fidx++;
 	while (ft_strchr(set, s1[lidx - 1]) && lidx > fidx)
 		lidx--;
@@ -33,6 +33,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 	i = 0;
 	while (fidx < lidx)
 		str[i++] = s1[fidx++];
-    str[i] = 0;
+	str[i] = 0;
 	return (str);
 }

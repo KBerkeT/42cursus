@@ -39,9 +39,7 @@ char	*ft_itoa(int n)
 {
 	char	*str;
 	int		len;
-	int		sign;
 
-	sign = 0;
 	len = ft_ndigit(n);
 	str = (char *) malloc(len + 1);
 	str[len] = 0;
@@ -53,10 +51,10 @@ char	*ft_itoa(int n)
 			n /= 10;
 		}
 		n *= -1;
-		str[sign++] = '-';
+		str[0] = '-';
 	}
 	if (n == 0)
-		str[sign] = '0';
+		str[0] = '0';
 	while (n != 0)
 	{
 		str[--len] = (n % 10) + 48;
