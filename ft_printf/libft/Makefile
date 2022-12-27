@@ -61,6 +61,8 @@ bonusobj = $(bonuslist:.c=.o)
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
 NAME = libft.a
+INCLUDES = ../include
+
 
 all: $(NAME)
 

@@ -17,6 +17,12 @@
 # include <stdlib.h>
 # include <stdarg.h>
 
-int	ft_printf(const char *s, ...);
+int	ft_printf(const char *format, ...);
+int ft_print_chr(int c);
+int ft_print_str(const char *s);
+int ft_print_per(void);
+int ft_print_int(int nbr);
+int ft_print_uint(unsigned int nbr);
+int	ft_print_hex(unsigned int nbr, const char format);
 
 #endif
