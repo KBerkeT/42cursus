@@ -6,19 +6,19 @@
 /*   By: kturken <kturken@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/27 13:01:38 by kturken           #+#    #+#             */
-/*   Updated: 2022/12/27 13:01:38 by kturken          ###   ########.fr       */
+/*   Updated: 2022/12/28 13:13:36 by kturken          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 #include "libft.h"
 
-int ft_ndigit_hex(unsigned int nbr)
+int	ft_ndigit_hex(unsigned int nbr)
 {
 	int	len;
 
 	len = 0;
-	while(nbr != 0)
+	while (nbr != 0)
 	{
 		len++;
 		nbr /= 16;

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_nbr.c                                     :+:      :+:    :+:   */
+/*   ft_print_uint.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kturken <kturken@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/27 12:20:04 by kturken           #+#    #+#             */
-/*   Updated: 2022/12/27 12:20:04 by kturken          ###   ########.fr       */
+/*   Updated: 2022/12/28 13:14:17 by kturken          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,13 +44,13 @@ char	*ft_uitoa(unsigned int n)
 	return (str);
 }
 
-int ft_print_uint(unsigned int nbr)
+int	ft_print_uint(unsigned int nbr)
 {
-    char    *str;
-    int     len;
+	char	*str;
+	int		len;
 
-    str = ft_uitoa(nbr);
-    len = ft_print_str(str);
-    free(str);
-    return (len);
+	str = ft_uitoa(nbr);
+	len = ft_print_str(str);
+	free(str);
+	return (len);
 }
