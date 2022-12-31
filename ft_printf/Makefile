@@ -10,45 +10,40 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME = libftprintf.a
-INCLUDE = include
-LIBFT = libft
-SRC_DIR = src/
-OBJ_DIR = obj/
-CC = gcc
-CCFLAGS = -Wall -Wextra -Werror
+NAME		= libftprintf.a
+INCLUDE		= include
+LIBFT		= libft
+SRC_DIR		= src/
+OBJ_DIR		= obj/
+CC			= gcc
+CFLAGS		= -Wall -Werror -Wextra -I
+RM			= rm -f
+AR			= ar rcs
 
-SRC_FILES = ft_printf ft_print_basic ft_print_hex ft_print_ptr ft_print_uint
+SRC_FILES	=	ft_printf ft_print_basic ft_print_ptr ft_print_uint ft_print_hex
 
-SRC = $(addprefix $(SRC_DIR), $(addsuffix .c, $(SRC_FILES)))
-OBJ = $(addprefix $(OBJ_DIR), $(addsuffix .o, $(SRC_FILES)))
+SRC 		= 	$(addprefix $(SRC_DIR), $(addsuffix .c, $(SRC_FILES)))
+OBJ 		= 	$(addprefix $(OBJ_DIR), $(addsuffix .o, $(SRC_FILES)))
 
 all:		$(NAME)
 
-$(NAME):	$(OBJ) $(LIBFT)
-	ar rc $(NAME) $(OBJ)
-
-$(OBJ):		$(OBJ_DIR)
-	
-
-$(LIBFT):
-	make -C $(LIBFT)
-	cp $(LIBFT) $(NAME)
-
-$(OBJ_DIR):
-	mkdir $(OBJ_DIR)
+$(NAME):	$(OBJ) $(OBJ_DIR)
+			make -C $(LIBFT)
+			cp libft/libft.a .
+			mv libft.a $(NAME)
 
 $(OBJ_DIR)%.o: $(SRC_DIR)%.c
-	$(CC) $(CCFLAGS) -c $< 
+			mkdir -p $(OBJ_DIR)
+			$(CC) $(CFLAGS) $(INCLUDE) -c $< -o $@
 
 clean:
-	rm -rf $(OBJ_DIR)
-	make clean -C $(LIBFT)
+			$(RM) -rf $(OBJ_DIR)
+			make clean -C $(LIBFT)
 
 fclean:		clean
-	rm -f $(NAME)
-	rm -f $(LIBFT)/libft.a
+			$(RM) -f $(NAME)
+			$(RM) -f $(LIBFT)/libft.a
 
 re:			fclean all
 
-.PHONY: all clean fclean re
+.PHONY:		all clean fclean re

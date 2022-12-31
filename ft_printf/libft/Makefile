@@ -59,15 +59,15 @@ OBJS = $(list:.c=.o)
 bonusobj = $(bonuslist:.c=.o)
 
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -I
 NAME = libft.a
-INCLUDES = ../include
+INCLUDE = ../include
 
 
 all: $(NAME)
 
 .c.o:
-	$(CC) -c $(CFLAGS) $<
+	$(CC) -c $(CFLAGS) $(INCLUDE) $<
 
 $(NAME): $(OBJS)
 	ar -rcs $(NAME) $(OBJS)

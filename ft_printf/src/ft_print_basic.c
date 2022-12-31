@@ -24,7 +24,7 @@ int	ft_print_str(const char *s)
 	int	i;
 
 	i = 0;
-	while (s[i] != NULL)
+	while (s[i] != 0)
 		write (1, &s[i++], 1);
 	return (ft_strlen(s));
 }
