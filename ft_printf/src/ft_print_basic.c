@@ -42,6 +42,6 @@ int	ft_print_int(int nbr)
 
 int	ft_print_per(void)
 {
-	write (1, '%', 1);
+	write (1, "%", 1);
 	return (1);
 }
